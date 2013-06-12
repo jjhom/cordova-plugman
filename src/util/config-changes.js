@@ -281,7 +281,8 @@ module.exports = {
                                     var pl = (isBinaryPlist(filepath) ? bplist : plist);
                                     var plistObj = pl.parseFileSync(filepath);
                                     if (plist_helpers.graftPLIST(plistObj, xml_child, selector)) {
-                                        fs.writeFileSync(filepath, plist.build(plistObj));
+                                        var regExp = new RegExp("<string>[ \t\r\n]+?</string>", "g");
+                                        fs.writeFileSync(filepath, plist.build(plistObj).replace(regExp, "<string></string>"));
                                     } else {
                                         throw new Error('grafting to plist "' + filepath + '" during config install went bad :(');
                                     }
