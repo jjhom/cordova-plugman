@@ -57,7 +57,7 @@ process.on('uncaughtException', function(error){
 });
 
 if (cli_opts.v) {
-    console.log(package.name + ' version ' + package.version);
+    console.log(package.name + ' version ' + package.version + ' (PGB)');
 }
 else if (!cli_opts.platform || !cli_opts.project || !cli_opts.plugin) {
     printUsage();
