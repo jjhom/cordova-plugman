@@ -68,7 +68,7 @@ plugman.on('error', console.error);
 plugman.on('results', console.log);
 
 if (cli_opts.version) {
-    console.log(package.name + ' version ' + package.version);
+    console.log(package.name + ' version ' + package.version + ' (PGB)');
 } else if (cli_opts.help) {
     console.log(plugman.help());
 } else if (plugman.commands[cmd]) {
