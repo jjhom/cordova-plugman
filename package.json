@@ -1,6 +1,6 @@
 {
   "author": "Andrew Lunny <alunny@gmail.com>",
-  "name": "plugman",
+  "name": "plugman-old",
   "description": "install/uninstall Cordova plugins",
   "version": "0.7.11",
   "repository": {
@@ -28,7 +28,7 @@
   "devDependencies": {
     "jasmine-node": "1.7.0"
   },
-  "bin" : { "plugman" : "./main.js" },
+  "bin" : { "plugman-old" : "./main.js" },
   "scripts": {
     "test": "jasmine-node --color spec"
   },
